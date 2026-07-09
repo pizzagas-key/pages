@@ -13,14 +13,14 @@
 数分後に次のURLで閲覧できます。
 
 ```
-https://pizzagas-key.github.io/fu_min/nico-report/
+https://pizzagas-key.github.io/pages/nico-report/
 ```
 
 ### Pages を使わない場合
 
 raw.githack.com 経由でも表示できます。
 
-- https://raw.githack.com/pizzagas-key/fu_min/main/nico-report/index.html
+- https://raw.githack.com/pizzagas-key/pages/main/nico-report/index.html
 
 ## 内容
 
