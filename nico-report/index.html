@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>音MAD 月別流行レポート</title>
+<style>
+:root {
+  --bg: #ffffff; --ink: #1a1a1a; --ink2: #555; --line: #e2e2e2;
+  --card: #f7f7f8; --accent: #2563a8; --hot: #b4530a;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16181c; --ink: #e8e8e8; --ink2: #9aa0a8; --line: #33363c;
+    --card: #1f2228; --accent: #7ab3e8; --hot: #e8a06a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic UI", Meiryo, sans-serif;
+  line-height: 1.75;
+}
+main { max-width: 920px; margin: 0 auto; padding: 24px 20px 80px; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+header.site {
+  border-bottom: 1px solid var(--line); padding: 18px 20px;
+  display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline;
+}
+header.site .title { font-size: 18px; font-weight: 700; }
+header.site nav { display: flex; gap: 14px; font-size: 14px; }
+header.site nav a.current { font-weight: 700; border-bottom: 2px solid var(--accent); }
+h1 { font-size: 26px; margin: 18px 0 4px; }
+h2.month {
+  font-size: 21px; margin: 46px 0 2px; padding-top: 26px;
+  border-top: 1px solid var(--line);
+}
+.meta { color: var(--ink2); font-size: 13px; margin: 0 0 10px; }
+.prose { margin: 10px 0 16px; }
+.prose strong { color: var(--hot); }
+.note {
+  background: var(--card); border-left: 4px solid var(--accent);
+  padding: 10px 14px; border-radius: 0 8px 8px 0; font-size: 14px; margin: 14px 0;
+}
+table.data {
+  border-collapse: collapse; width: 100%; font-size: 13px; margin: 8px 0 18px;
+}
+table.data th, table.data td {
+  padding: 5px 10px; border-bottom: 1px solid var(--line); text-align: left;
+}
+table.data th { color: var(--ink2); font-weight: 600; }
+table.data td.num, table.data th.num { text-align: right; font-variant-numeric: tabular-nums; }
+details { margin: 8px 0 18px; }
+details summary { cursor: pointer; color: var(--ink2); font-size: 14px; }
+.videos { display: flex; flex-wrap: wrap; gap: 20px; margin: 12px 0; }
+.embed { flex: 1 1 320px; max-width: 448px; }
+.embed iframe { width: 100%; aspect-ratio: 16 / 9; border: 0; border-radius: 8px; }
+.embed .cap { font-size: 14px; margin-top: 6px; }
+.cards { flex: 1 1 340px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.card { display: flex; gap: 10px; align-items: center; }
+.card img { width: 96px; border-radius: 6px; flex-shrink: 0; }
+.card .t { font-size: 14px; min-width: 0; }
+.card .sub, .embed .sub { color: var(--ink2); font-size: 12.5px; }
+.rank { font-weight: 700; }
+footer { color: var(--ink2); font-size: 12.5px; border-top: 1px solid var(--line);
+  margin-top: 60px; padding-top: 14px; }
+ul.years { font-size: 17px; line-height: 2.2; }
+.toc { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 14px; margin: 8px 0 0; }
+</style>
+</head>
+<body>
+<header class="site">
+  <span class="title"><a href="index.html">音MAD 月別流行レポート</a></span>
+  <nav><a href="2026.html">2026年</a><a href="2025.html">2025年</a><a href="2024.html">2024年</a></nav>
+</header>
+<main>
+
+<h1>音MAD 月別流行レポート</h1>
+<p>ニコニコ動画の「音MAD」タグ付き動画（2024年以降）を月ごとに集計し、
+その月に急増したタグ（バーストスコア）から「何が流行ったのか」を
+素材・曲・イベントに分けてまとめた読み物です。各月の再生数上位動画も
+埋め込みプレイヤー・サムネイル付きで掲載しています。</p>
+<ul class="years"><li><a href="2026.html">2026年のレポート</a>（投稿数 10,490 件）</li><li><a href="2025.html">2025年のレポート</a>（投稿数 19,166 件）</li><li><a href="2024.html">2024年のレポート</a>（投稿数 18,656 件）</li></ul>
+<div class="note">⚠️ 2024年6月中旬〜8月上旬はニコニコ動画のサービス停止期間のため、6月は中旬まで・7月はデータがありません。</div>
+
+<footer>
+  データ: ニコニコ動画スナップショット検索API v2 ｜ 再生数・順位は収集時点（2026年6月）のスナップショットです。<br>
+  バーストスコア = 当月件数 ÷ (過去6ヶ月平均 + 3)。生成日: 2026-07-10
+</footer>
+</main>
+</body>
+</html>
